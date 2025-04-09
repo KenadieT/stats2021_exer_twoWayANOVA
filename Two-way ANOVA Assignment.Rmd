@@ -50,7 +50,7 @@ The rio package works for importing several different types of data files. We're
 
 ```{r}
 # Using the file.choose() command allows you to select a file to import from another folder.
-dataset <- rio::import(file.choose())
+dataset <- rio::import("Goggles.sav")
 # This command will allow us to import a file included in our project folder.
 # dataset <- rio::import("Album Sales.sav")
 ```
@@ -123,16 +123,16 @@ summary(model)
 Compare the output from the lm() function with the output from the function in the jmv package.
 
 ```{r}
-jmv::ANOVA(
-    formula = Attractiveness ~ FaceType + Alcohol + FaceType:Alcohol,
-    data = dataset,
-    effectSize = "omega",
-    homo = TRUE,
-    norm = TRUE,
-    qq = TRUE,
-    postHoc = ~ FaceType + Alcohol,
-    postHocES = "d",
-    emMeans = ~ FaceType:Alcohol + Alcohol:FaceType)
+##jmv::ANOVA(
+  ##  formula = Attractiveness ~ FaceType + Alcohol + FaceType:Alcohol,
+  ##  data = dataset,
+  ##  effectSize = "omega",
+  ##  homo = TRUE,
+   ## norm = TRUE,
+  ##  qq = TRUE,
+   ## postHoc = ~ FaceType + Alcohol,
+  ##  postHocES = "d",
+   ## emMeans = ~ FaceType:Alcohol + Alcohol:FaceType)
 ```
 
 
